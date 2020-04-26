@@ -1,1 +1,20 @@
+server:33554432
+  port: 8080
 
+template:
+  templates:
+    - {"templateId":"1", "templateFilePath":"D:/project/Java/kafka-study/src/main/resources/template/template.json", "active":true}
+  template-result-type: 0 #0文件 1数据库 2es
+  template-result-file-path: "D:/project/Java/kafka-study/src/main/resources/template/templateResult.json"
+
+
+wechat:
+  kakfa:
+    bootstrap_servers_config: "192.168.1.104:9092"
+    acks_config: "all"
+    retries_config: "0"
+    batch_size_config: "16384"
+    linger_ms_config: "1"
+    buffer_memory_config: "33554432"
+    key_serializer_class_config: "org.apache.kafka.common.serialization.stringserializer"
+    value_serializer_class_config: "org.apache.kafka.common.serialization.stringserializer"
