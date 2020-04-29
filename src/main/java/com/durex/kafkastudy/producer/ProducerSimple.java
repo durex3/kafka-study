@@ -34,7 +34,7 @@ public class ProducerSimple {
     public static void producerSend() {
         Producer<String, String> producer = new KafkaProducer<>(properties);
         // 消息对象
-        for (int i = 0; i < SIZE; i++) {
+        for (int i = 0; i < SIZE * 10; i++) {
             ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, "key-" + i , "value-" + i);
             producer.send(record);
         }
@@ -87,6 +87,6 @@ public class ProducerSimple {
     }
 
     public static void main(String[] args) throws Exception {
-        producerCallbackAndPartitionSend();
+        producerSend();
     }
 }
