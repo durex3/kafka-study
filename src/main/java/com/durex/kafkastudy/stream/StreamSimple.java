@@ -27,7 +27,6 @@ public class StreamSimple {
         props.put(StreamsConfig.APPLICATION_ID_CONFIG,"wordcount-app");
         props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
-
         // 如果构建流结构拓扑
         final StreamsBuilder builder = new StreamsBuilder();
         wordCountStream(builder);
