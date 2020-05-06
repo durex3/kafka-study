@@ -123,6 +123,7 @@ public class AdminSample {
     }
 
     public static void main(String[] args) throws Exception {
-        describeTopics();
+        createTopics();
+        topicsLists();
     }
 }
